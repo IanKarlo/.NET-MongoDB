@@ -6,7 +6,7 @@ using API.Extra;
 using System;
 
 namespace API.Controllers
-{
+{   
     [ApiController]
     [Route("[controller]")]
     public class InfectadoController : ControllerBase
@@ -22,6 +22,7 @@ namespace API.Controllers
             _infectadosCollection = _mongoDB.DB.GetCollection<Infectado>(typeof(Infectado).Name.ToLower());
         }
 
+
         [HttpPost]
         public ActionResult SalvarInfectado([FromBody] InfectadoDto dto)
         {
@@ -32,7 +33,7 @@ namespace API.Controllers
 
             GetSystemID.UpdateID(identifier+1);
             
-            return StatusCode(201, "Infectado adicionado com sucesso");
+            return StatusCode(201, $"Infectado adicionado com sucesso com o ID:{identifier}");
         }
 
         [HttpGet]

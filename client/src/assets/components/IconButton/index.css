@@ -1,0 +1,22 @@
+.icon-btn-s{
+  vertical-align: middle;
+  line-height: 20px;
+  display: inline-block;
+}
+
+.icon-btn{
+  vertical-align: middle;
+  line-height: 20px;
+  display: inline-block;
+  color: rgb(40, 60, 241);
+}
+
+.icon-btn-s:hover {
+  cursor: pointer;
+  color: #5F5F5F;
+}
+
+.icon-btn:hover {
+  cursor: pointer;
+  color: rgba(40, 60, 241, 0.678);
+}
